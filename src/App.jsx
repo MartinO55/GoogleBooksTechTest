@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./components/header/Header";
-import SearchBar from "./components/searchBar/SearchBar";
-import FontWrapper from "./containers/FontWrapper/FontWrapper";
+import SearchBar from "./components/searchBar/SearchBar.jsx";
+import FontWrapper from "./containers/FontWrapper";
 import CardHolder from "./components/CardHolder/CardHolder.jsx";
 
 function App() {
