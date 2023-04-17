@@ -1,0 +1,33 @@
+@use "../../Styles/_themes.scss" as variable;
+
+.SearchBar {
+  background-color: variable.$glaucous;
+  margin: 1rem;
+  padding: 1rem;
+
+  .SearchBar_holder {
+    padding: 0.5rem;
+
+    > Button {
+      background-color: variable.$jet;
+      color: variable.$white;
+      border-radius: 1rem;
+      padding: 1rem;
+      font-size: 1rem;
+
+      &:hover {
+        box-shadow: 0rem 0rem 0.9rem variable.$jet;
+      }
+    }
+
+    .SearchBar_input {
+      margin: 0.5rem;
+      padding: 1rem;
+      font-size: 1rem;
+
+      &:hover {
+        box-shadow: 0rem 0rem 0.9rem variable.$white;
+      }
+    }
+  }
+}

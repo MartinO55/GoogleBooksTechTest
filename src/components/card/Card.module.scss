@@ -1,0 +1,40 @@
+@use "../../Styles/_themes.scss" as variable; //it should be @use, not @import; I'm not sure how the re renders in react would interact with the scss imports
+
+.Card {
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: variable.$goldFusion;
+  max-width: 40%;
+  justify-content: center;
+  border-radius: 1rem;
+  color: variable.$white;
+  min-width: 40%;
+
+  .Card_TitleElement {
+    display: flex;
+    flex-direction: row; //add breakpoint to switch this to column
+    justify-content: space-between;
+    @media only screen and (max-width: 850px) {
+      flex-direction: column;
+    }
+
+    > img {
+      height: 15rem; //breakpoint to shrink image a bit too
+      border-radius: 0.2rem;
+      width: auto;
+      @media only screen and (max-width: 800px) {
+        height: 10rem;
+      }
+    }
+
+    .Card_TitleElement_Byline {
+      margin: 1rem;
+    }
+  }
+
+  &:hover {
+    background-color: variable.$goldFusion;
+    box-shadow: 0rem 0rem 1rem variable.$goldFusion;
+  }
+}

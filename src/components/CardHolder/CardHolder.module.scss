@@ -1,0 +1,11 @@
+@use "../../Styles/_themes.scss" as variable;
+.CardHolder {
+  background-color: variable.$macaroniAndCheese;
+  margin: 1rem;
+}
+
+.CardHolder_loaded {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
