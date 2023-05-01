@@ -18,7 +18,7 @@ const SearchBar = ({ value, onSubmit }) => {
         <div className={styles.SearchBar_holder}>
           <input
             className={styles.SearchBar_input}
-            placeholder="search ..."
+            placeholder="flowers"
             onChange={handleChange}
             value={internal}
           ></input>

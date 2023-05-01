@@ -32,13 +32,14 @@ const CardHolder = ({ query = "" }) => {
   }, [query]);
 
   const sortedBooks = [...books].sort((a, b) => (a.title > b.title ? 1 : -1));
+  console.log(sortedBooks);
 
   return (
     <>
       <div className={styles.CardHolder}>
         {loading ? (
           <p>Loading...</p>
-        ) : books.length === 0 ? (
+        ) : sortedBooks.length === 0 ? (
           <p>No results.</p>
         ) : (
           //didn't realise that this is the div that takes the flexwrap
