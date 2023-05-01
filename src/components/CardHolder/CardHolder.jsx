@@ -31,6 +31,8 @@ const CardHolder = ({ query = "" }) => {
       });
   }, [query]);
 
+  const sortedBooks = [...books].sort((a, b) => (a.title > b.title ? 1 : -1));
+
   return (
     <>
       <div className={styles.CardHolder}>
@@ -41,7 +43,7 @@ const CardHolder = ({ query = "" }) => {
         ) : (
           //didn't realise that this is the div that takes the flexwrap
           <div className={styles.CardHolder_loaded}>
-            {books.map((book, index) => (
+            {sortedBooks.map((book, index) => (
               <Card
                 key={index}
                 title={
